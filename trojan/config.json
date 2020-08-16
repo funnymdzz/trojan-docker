@@ -1,9 +1,9 @@
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
-    "local_port": 443,
+    "local_port": PORT,
     "remote_addr": "127.0.0.1",
-    "remote_port": 80,
+    "remote_port": PORT,
     "password": [
         "password2"
     ],
@@ -26,7 +26,7 @@
         "dhparam": ""
     },
     "tcp": {
-        "prefer_ipv4": false,
+        "prefer_ipv4": true,
         "no_delay": true,
         "keep_alive": true,
         "reuse_port": false,
