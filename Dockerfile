@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 RUN apt update
-RUN apt install ca-certificates curl bash openssl xz wget
+RUN apt install ca-certificates curl bash openssl xz-utils wget
 RUN wget https://github.com/trojan-gfw/trojan/releases/download/v1.16.0/trojan-1.16.0-linux-amd64.tar.xz -O trojan.tar.xz
 RUN mkdir /trojan
 RUN tar -xf trojan.tar.xz -C /trojan
