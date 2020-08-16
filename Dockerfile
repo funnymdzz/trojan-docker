@@ -1,7 +1,9 @@
 FROM alpine:latest
 RUN apk update
 RUN apk upgrade
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash openssl
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash openssl xz wget
+RUN wget https://github.com/trojan-gfw/trojan/releases/download/v1.16.0/trojan-1.16.0-linux-amd64.tar.xz -O trojan.tar.xz
+RUN tar -xf trojan.tar.xz -C /trojan/
 ADD /trojan/config.json /trojan/config.json
 RUN chmod +x /trojan/config.json
 
