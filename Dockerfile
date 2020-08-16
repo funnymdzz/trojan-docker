@@ -16,4 +16,6 @@ RUN chmod +x /trojan/trojan
 
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
+RUN chgrp -R 0 /trojan
+RUN chmod -R g+rwX /trojan
 CMD /configure.sh
